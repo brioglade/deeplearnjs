@@ -238,6 +238,7 @@ const SHADER_PREFIX = `
   const vec2 halfCR = vec2(0.5, 0.5);
 
   bool isNaN(float val) {
+    // return (val <= 0.0 || 0.0 <= val || val == 0.0) ? false : true;
     return val == val ? false : true;
   }
 
