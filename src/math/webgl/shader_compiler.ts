@@ -243,6 +243,8 @@ const SHADER_PREFIX = `
   }
 
   bool hasNaN(vec4 values) {
+    // TODO - left off right here.
+    // Use Vector Relational Functions for handling this case.
     return any(notEqual(values, values));
   }
 
