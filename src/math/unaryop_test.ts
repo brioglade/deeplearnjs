@@ -581,7 +581,7 @@ import {Array1D, Array2D, Scalar} from './ndarray';
 // math.asin
 {
   const tests: MathTests = it => {
-    it('basic', math => {
+    it('basic KREEGER', math => {
       const values = [.1, -3, 2, 7, -4];
       const a = Array1D.new(values);
 
@@ -596,7 +596,7 @@ import {Array1D, Array2D, Scalar} from './ndarray';
       a.dispose();
     });
 
-    it('propagates NaNs', math => {
+    it('propagates NaNs KREEGER', math => {
       const a = Array1D.new([4, NaN, 0]);
 
       const res = math.asin(a).getValues();

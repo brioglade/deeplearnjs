@@ -238,8 +238,8 @@ const SHADER_PREFIX = `
   const vec2 halfCR = vec2(0.5, 0.5);
 
   bool isNaN(float val) {
-    // return val == val ? false : true;
-    return ( val < 0.0 || 0.0 < val || val == 0.0 ) ? false : true;
+    // return ( val < 0.0 || 0.0 < val ) ? false : true;
+    return val == val ? false : true;
   }
 
   bool hasNaN(vec4 values) {
@@ -249,7 +249,7 @@ const SHADER_PREFIX = `
   }
 
   float getNaN(vec4 values) {
-    return dot(vec4(0.0), values);
+    return dot(vec4(1), values);
   }
 
   int round(float value) {
